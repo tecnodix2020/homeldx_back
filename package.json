@@ -1,0 +1,19 @@
+{
+  "name": "homeldx_back",
+  "version": "0.0.1",
+  "main": "app.js",
+  "repository": "https://github.com/tecnodix2020/homeldx_back.git",
+  "author": "tecnodix2020 <tecnodix2020@gmail.com>",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  }
+}
