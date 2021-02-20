@@ -42,7 +42,7 @@ module.exports = {
 
   async update (request, response) {
     const { employee_id } = request.params
-    const employee = await Employee.findById(state_id)
+    const employee = await Employee.findById(employee_id)
 
     if (!employee) {
       return response.status(400).json({ error: 'Employee does not exists' })
