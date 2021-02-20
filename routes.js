@@ -30,5 +30,6 @@ routes.get('/employee', EmployeeController.index)
 routes.get('/employee/:employee_id', EmployeeController.getById)
 routes.post('/employee', EmployeeController.store)
 routes.put('/employee/:employee_id', EmployeeController.update)
+routes.patch('/employee/:employee_id', EmployeeController.update)
 
 module.exports = routes
