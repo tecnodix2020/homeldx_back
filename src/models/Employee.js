@@ -6,11 +6,10 @@ const EmployeeSchema = new mongoose.Schema({
   job: String,
   // avatar: String,
   cep: String,
-  city: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'City'
-  },
+  city: String,
+  state: String,
   address: String,
+  neighborhood: String,
   gpslat: Number,
   gpslon: Number
 })

@@ -14,24 +14,22 @@ module.exports = {
       email,
       job,
       cep,
-      city_id,
+      state,
+      city,
+      neighborhood,
       address,
       gpslat,
       gpslon
     } = request.body
 
-    const city = await City.findById(city_id)
-
-    if (!city) {
-      return response.status(400).json({ error: 'City does not exists '})
-    }
-
     const employee = await Employee.create({
-      city: city_id,
+      city,
       name,
       email,
       job,
       cep,
+      state,
+      neighborhood,
       address,
       gpslat,
       gpslon
@@ -53,20 +51,18 @@ module.exports = {
       email,
       job,
       cep,
-      city_id,
+      city,
+      state,
+      neighborhood,
       address,
       gpslat,
       gpslon
     } = request.body
 
-    const city = await City.findById(city_id)
-
-    if (!city) {
-      return response.status(400).json({ error: 'City does not exists '})
-    }
-
     const newEmployee = await Employee.findByIdAndUpdate(employee_id, { $set: {
-      city: city_id,
+      city: city,
+      state: state,
+      neighborhood: neighborhood,
       name: name,
       email: email,
       job: job,
